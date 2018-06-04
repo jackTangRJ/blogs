@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> github新建博客并绑定阿里云域名 · 小唐的前端博客</title><meta name="description" content="github新建博客并绑定阿里云域名 - JackTang"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/ico.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://jacktangrj.github.io/atom.xml" title="小唐的前端博客"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/ico.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首 页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">所有文章</a></li><li class="nav-list-item"><a href="http://blog.tanwei888.com" target="_blank" class="nav-list-link">前端每日一课</a></li><li class="nav-list-item"><a href="https://github.com/jackTangRJ/" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">github新建博客并绑定阿里云域名</h1><div class="post-info">May 28, 2018</div><div class="post-content"><p><img src="/img/day-1.png" alt="image"></p>
+<blockquote>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4></blockquote>
+<p>其实平时自己写的文章并不多，偶尔看到一些东西会做点笔记，但是每次写的东西都会到处放，不好找，所以才想着自己搭建一个人博客网站。</p>
+<p>具体步骤如下：安装NodeJs-&gt;安装hexo-&gt;生成SSH并添加到github-&gt;部署项目-&gt;上传到github-&gt;绑定个人域名</p>
+<a id="more"></a>
+<h3 id="1-到Node-js官方网址下载对应版本"><a href="#1-到Node-js官方网址下载对应版本" class="headerlink" title="1.到Node.js官方网址下载对应版本"></a>1.到<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js官方网址</a>下载对应版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 node -v 出现版本号即为成功</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git"></a>2.安装Git</h3><ul>
+<li><p>[x] 1. 到官方网址下载对应的版本<br>  Git各平台下载地址：<a href="https://git-scm.com/download" target="_blank" rel="noopener">https://git-scm.com/download</a><br>  Windows平台Git下载地址：<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a> </p>
+</li>
+<li><p>[x] 2.检查Git版本</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 git --version</span><br></pre></td></tr></table></figure>
+<h3 id="3-GitHubPages配置"><a href="#3-GitHubPages配置" class="headerlink" title="3.GitHubPages配置"></a>3.GitHubPages配置</h3><ol>
+<li>进入GitHub官网<a href="https://github.com/注册账号" target="_blank" rel="noopener">https://github.com/注册账号</a></li>
+<li>新建项目</li>
+<li>在建好的项目右侧有Settings </li>
+<li>向下拉可看到GitHub Pages </li>
+</ol>
+<p><img src="http://www.wailian.work/images/2018/05/28/555.md.png" alt="image"></p>
+<p>点击对应的网址你会发现该项目已经被部署到网络上，你可以通过外网来访问它。</p>
+<h3 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4.安装Hexo"></a>4.安装Hexo</h3><p>在自己认为合适的地方创建一个文件夹，用来存放之后博客的文档以及配置文件，我是在C盘新建了文件夹，并命名为Blogs。<br>然后点击进入创建的文件夹，点击鼠标右键选择Git Bash Here</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 npm install hexo -g 开始安装Hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo -v 检查是否安装成功</span><br></pre></td></tr></table></figure>
+<p><img src="http://www.wailian.work/images/2018/05/28/_20180528171548.md.png" alt="image"></p>
+<p>初始化该文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo init</span><br></pre></td></tr></table></figure>
+<p>这个过程也有点漫长需要等待几分钟，最后出现Start blogging with Hexo！是不是很激动！！</p>
+<p>开始安装所需要的组件(也可通过淘宝源 cnpm install安装)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 npm install</span><br></pre></td></tr></table></figure></p>
+<p>最后两步你就可以看到博客雏形了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo g</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo s</span><br></pre></td></tr></table></figure>
+<p><img src="http://www.wailian.work/images/2018/05/28/666.md.png" alt="image"></p>
+<p><strong>骚年，打开你的浏览器 输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 开启博客之旅</strong></p>
+<p><img src="http://www.wailian.work/images/2018/05/28/1108615-20171022001738037-1195721153.md.png" alt="image"></p>
+<h3 id="5-Hexo连接GithubPages"><a href="#5-Hexo连接GithubPages" class="headerlink" title="5.Hexo连接GithubPages"></a>5.Hexo连接GithubPages</h3><p>将Hexo与GithubPages联系起来，首次运行的话这里需要设置Git的user name和email<br>ctrl+C结束之前的sever</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入 git config --global user.name &quot;tangrenjie&quot; </span><br><span class="line"></span><br><span class="line">改成你自己的即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入 git config --g global user.email &quot;406067361@qq.com&quot; </span><br><span class="line"></span><br><span class="line">改成你自己的即可</span><br></pre></td></tr></table></figure>
+<h5 id="1-首先需要检查你电脑是否已经有-SSH-key"><a href="#1-首先需要检查你电脑是否已经有-SSH-key" class="headerlink" title="1.首先需要检查你电脑是否已经有 SSH key"></a>1.首先需要检查你电脑是否已经有 SSH key</h5><p>运行 git Bash 客户端，输入如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br><span class="line">$ ls</span><br></pre></td></tr></table></figure>
+<p><img src="http://www.wailian.work/images/2018/05/28/999.md.png" alt="image"></p>
+<p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么你可以跳过步骤2，直接进入步骤3。</p>
+<h5 id="2、创建一个-SSH-key"><a href="#2、创建一个-SSH-key" class="headerlink" title="2、创建一个 SSH key"></a>2、创建一个 SSH key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>添加密钥到ssh-agent</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 eval &quot;$(ssh-agent -s)&quot;</span><br></pre></td></tr></table></figure>
+<p>添加生成的SSH key到ssh-agent</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>代码参数含义：</p>
+<p>-t 指定密钥类型，默认是 rsa ，可以省略。<br>-C 设置注释文字，比如邮箱。<br>-f 指定密钥文件存储文件名。</p>
+<h5 id="3、添加你的-SSH-key-到-github上面去"><a href="#3、添加你的-SSH-key-到-github上面去" class="headerlink" title="3、添加你的 SSH key 到 github上面去"></a>3、添加你的 SSH key 到 github上面去</h5><p>a、首先你需要拷贝 id_rsa.pub 文件的内容，你可以用编辑器打开文件复制，也可以用git命令复制该文件的内容，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>b、登录你的github账号，从又上角的设置（ Account Settings ）进入，然后点击菜单栏的 SSH key 进入页面添加 SSH key。</p>
+<p><img src="http://www.wailian.work/images/2018/05/28/444.md.png" alt="image"></p>
+<p><img src="http://www.wailian.work/images/2018/05/28/5555.md.png" alt="image"></p>
+<h3 id="6-配置Deploy"><a href="#6-配置Deploy" class="headerlink" title="6.配置Deploy"></a>6.配置Deploy</h3><p>在你的博客所在文件夹根目录，例如我的是在C:\Blogs</p>
+<p>找到_config.yml文件，点击编辑，我是用的nodepad++打开的 </p>
+<p><img src="http://www.wailian.work/images/2018/05/28/ppp.md.png" alt="image"></p>
+<p>==这里需要注意的是格式一定是：后跟一个空格，名称对应自己的GitHub项目名称==</p>
+<p>到这里基本上博客已经搭建成功</p>
+<h3 id="7-发布文章"><a href="#7-发布文章" class="headerlink" title="7.发布文章"></a>7.发布文章</h3><p>安装扩展 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo new &quot;Hexo教程&quot;</span><br></pre></td></tr></table></figure>
+<p>此时在我的 C:\Blogs\source_posts 下会出现 Hexo教程.md文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo g 编译，每次改动上传都要执行此操作</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo d 上传，等待一段时间就可以到github上去看已经提交了</span><br></pre></td></tr></table></figure>
+<h3 id="8-安装主题"><a href="#8-安装主题" class="headerlink" title="8.安装主题"></a>8.安装主题</h3><p>Concise，一款为hexo设计的简约而漂亮的主题</p>
+<h6 id="克隆主题"><a href="#克隆主题" class="headerlink" title="克隆主题"></a>克隆主题</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/huangjunhui/concise.git themes/concise</span><br></pre></td></tr></table></figure>
+<h6 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h6><pre><code>修改你的博客根目录下的config.yml配置文件中的theme属性，将其修改为concise
+</code></pre><h6 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd themes/concise</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+<pre><code>更新前，请先备份你的themes/concise/_config.yml文件。
+</code></pre><p>更多请浏览 <a href="https://github.com/huangjunhui/concise/blob/master/README_ZH.md" target="_blank" rel="noopener">concise官网</a></p>
+<h3 id="9-绑定阿里云域名"><a href="#9-绑定阿里云域名" class="headerlink" title="9.绑定阿里云域名"></a>9.绑定阿里云域名</h3><p>1.ping 一下你的github地址</p>
+<p>我的github为  <a href="https://jacktangrj.github.io">https://jacktangrj.github.io</a></p>
+<p><img src="http://www.wailian.work/images/2018/05/29/ip.png" alt="image"></p>
+<p>2.打开阿里云<br><img src="http://www.wailian.work/images/2018/05/29/j1.png" alt="image"></p>
+<p>3.更改hexo</p>
+<p>打开本地文件地址，在source文件夹下添加CHANGE文件（==注意 没有后缀名==），里面的内容为你的域名</p>
+<p><img src="http://www.wailian.work/images/2018/05/29/3333.png" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入 hexo g</span><br><span class="line">    hexo d </span><br><span class="line">    提交至github</span><br></pre></td></tr></table></figure>
+<p>4.在github上修改</p>
+<p><img src="http://www.wailian.work/images/2018/05/29/888.png" alt="image"></p>
+<p>5.稍等一会，即可看到效果</p>
+<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1></div></article></div></main><footer><div class="paginator"><a href="/2018/05/jsThis/" class="prev">上一篇</a></div><div class="copyright"><p>© 2015 - 2018 <a href="https://jacktangrj.github.io">JackTang</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
