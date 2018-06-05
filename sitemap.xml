@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jacktangrj.github.io/2018/06/JSON/</loc>
+    
+    <lastmod>2018-06-05T07:30:56.576Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jacktangrj.github.io/2018/05/jsThis/</loc>
     
-    <lastmod>2018-06-04T09:24:08.527Z</lastmod>
+    <lastmod>2018-06-05T02:07:52.663Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jacktangrj.github.io/2018/05/createBlog/</loc>
+    
+    <lastmod>2018-06-05T01:50:09.719Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://jacktangrj.github.io/2018/06/scope/</loc>
     
     <lastmod>2018-06-04T09:23:51.206Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jacktangrj.github.io/2018/05/createBlog/</loc>
-    
-    <lastmod>2018-06-04T09:23:34.095Z</lastmod>
     
   </url>
   
