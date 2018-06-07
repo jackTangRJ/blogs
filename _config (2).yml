@@ -1,0 +1,23 @@
+menu:
+    首 页: /
+    所有文章: /archives/
+    前端每日一课: http://blog.tanwei888.com
+    GitHub: https://github.com/jackTangRJ/
+    Rss: /atom.xml
+
+favicon: /ico.png
+logo: /ico.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo:
+
+# Analytics
+# google-analytics:
+# ga: UA-xxxxxxxx-x
+
+# Copyright Infomation
+startyear: 2015
+
+//主题为 apollo
